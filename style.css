@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Molengo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  font-family:'Molengo', sans-serif, 'Times New Roman', Times, serif;
+}
+#slider {
+    overflow: hidden;
+    }
+    
+    #slider figure{
+        position:relative;
+        width:500%;
+        margin:0;
+        left:0;
+        animation : 20s slider infinite;
+    }
+    
+    #slider figure img{
+        width:20%;
+        float:left;    
+    }
+    
+    @keyframes slider{
+        0%{
+            left:0;
+        }
+        20%{
+            left:0;
+        }
+        25%{
+            left:-100%;
+        }
+        45%{
+            left:-100%;
+        }
+        50%{
+            left:-200%;
+        }
+        70%{
+            left:-200%;
+        }
+        75%{
+            left:-300%
+        }
+        95%{
+            left:-300%;
+        }
+        100%{
+            left:-400%;
+        }
+    }
+.landing{
+  background-blend-mode: url(./image/Home-image.jpg);
+  background: url(./image/buffet.jpg);
+  background-size: cover;
+  min-height:100vh;
+  overflow: hidden;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:rgb(17, 17, 17);
+  height:8vh;
+  opacity: 0.8;
+}
+ul{
+  display:flex;
+  margin-right:20px;
+  justify-content: space-between;
+}
+ul li{
+  list-style-type: none;
+  padding:0 2rem;
+}
+.header h2 a, ul li a{
+  text-decoration: none;
+  color:white;
+}
+.logo{
+  padding: 0 2rem;
+  align-self: center;
+}
+/* (A) WRAPPER */
+#hamnav {
+    width: 100%;
+    /* Optional */
+    position: sticky;
+    top: 0;
+  }
+  
+  /* (B) HORIZONTAL MENU ITEMS */
+  #hamitems { display: flex; }
+  #hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  #hamitems a:hover { background: #401408; }
+  
+  /* (C) HIDE HAMBURGER */
+  #hamnav label, #hamburger { display: none; }
+  
+  @media screen and (max-width: 768px){
+    /* (A) BREAK INTO VERTICAL MENU */
+    #hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #333;
+    }
+  
+    /* (B) SHOW HAMBURGER ICON */
+    #hamnav label {
+      display: inline-block;
+      color: white;
+      background: #a02620;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+  
+    /* (C) TOGGLE SHOW/HIDE MENU */
+    #hamitems { display: none; }
+    #hamnav input:checked ~ #hamitems { display: block; }
+  }
+  
+  /* [DOES NOT MATTER] */
+  html, body {
+    padding: 0;
+    margin: 0;
+    font-family: arial, sans-serif;
+  }
+  
+.openmenu{
+  color:rgb(245, 240, 239);
+  height:5rem;
+  display: block;
+}
+.welcome{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  min-height:30vh;
+  width:50%;
+  margin:auto;
+  margin-top:190px;
+  background-color:burlywood;
+  border-radius: 30px;
+  opacity:0.9;
+}
+/*.read{
+  width:auto;
+  margin:10px;
+  color:rgb(24, 23, 23);
+  opacity: 0.9;
+  background-color: rgb(253, 248, 247);
+  border:none;
+  padding:0.2rem 0.5rem;
+  font-size:1rem;
+  border-radius: 5px;
+}*/
+.welcome-txt{
+  font-family: 'bold';
+  font-size: 2rem;
+  margin:10px;
+}
+.highlight{
+  color:rgb(14, 13, 13);
+  font-weight: 100;
+}
+.desc{
+  margin:15px;
+  text-align: center;
+}
